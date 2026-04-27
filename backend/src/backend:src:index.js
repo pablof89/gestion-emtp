@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2869
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
 \margl1440\margr1440\vieww11520\viewh8400\viewkind0
@@ -10,9 +10,15 @@
 const app = express();\
 \
 app.get("/", (req, res) => \{\
-  res.send("\uc0\u55357 \u56960  App funcionando!");\
+  res.send("
+\f1 \uc0\u55357 \u56960 
+\f0  App funcionando!");\
 \});\
 \
-app.listen(3000, () => \{\
+const PORT = process.env.PORT || 3000;\
+\
+app.listen(PORT, () => \{\
+  console.log("Servidor corriendo en puerto", PORT);\
+\});\
   console.log("Servidor corriendo");\
 \});}
